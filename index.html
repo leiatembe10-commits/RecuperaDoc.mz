@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RecuperaDoc.mz ajuda pessoas em Moçambique a reportar documentos perdidos e encontrados com segurança, privacidade e apoio humanizado."
+    />
+    <title>RecuperaDoc.mz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand" aria-label="RecuperaDoc.mz logo">
+          <div class="brand-mark">R</div>
+          <div>
+            <span class="brand-name">RecuperaDoc.mz</span>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+          <a href="#perdi">Perdi um documento</a>
+          <a href="#encontrei">Encontrei um documento</a>
+          <a href="#seguranca">Segurança</a>
+          <a href="#admin">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Ajuda rápida e segura</p>
+            <h1>O teu documento pode estar mais perto do que imaginas.</h1>
+            <p class="lead">
+              A plataforma RecuperaDoc.mz conecta pessoas que perderam documentos com quem
+              os encontrou, de forma segura, discreta e orientada à confirmação oficial.
+            </p>
+
+            <div class="cta-group">
+              <a href="#perdi" class="btn btn-primary">Perdi um documento</a>
+              <a href="#encontrei" class="btn btn-secondary">Encontrei um documento</a>
+            </div>
+
+            <div class="mini-stats" aria-label="Indicadores da plataforma">
+              <div>
+                <strong>Segurança</strong>
+                <span>Dados protegidos</span>
+              </div>
+              <div>
+                <strong>Privacidade</strong>
+                <span>Sem publicação pública</span>
+              </div>
+              <div>
+                <strong>Confiança</strong>
+                <span>Sem confirmação automática</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Como funciona a plataforma">
+            <div class="card-panel">
+              <h2>Como funciona</h2>
+              <ol>
+                <li>Registas uma ocorrência.</li>
+                <li>Comparamos dados e localização.</li>
+                <li>Recebes uma notificação interna.</li>
+                <li>Confirma com a entidade competente.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-strip">
+        <div class="container strip-grid">
+          <div>
+            <span class="tag">Processo simples</span>
+            <h3>Regista a pesquisa ou o documento encontrado</h3>
+          </div>
+          <div>
+            <span class="tag">Correspondências</span>
+            <h3>Identificamos possíveis ligações sem expor dados privados</h3>
+          </div>
+          <div>
+            <span class="tag">Apoio humano</span>
+            <h3>Encaminhamos para verificação oficial quando necessário</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="forms-section" id="perdi">
+        <div class="container section-heading">
+          <p class="eyebrow">1. Perdi um documento</p>
+          <h2>Regista a procura do teu documento</h2>
+        </div>
+
+        <div class="container form-shell">
+          <form class="report-form lost-form" id="lostForm">
+            <div class="field-grid">
+              <label>
+                Tipo de documento
+                <select name="documentType" required>
+                  <option value="">Seleciona</option>
+                  <option>BI</option>
+                  <option>Passaporte</option>
+                  <option>Carta de condução</option>
+                  <option>Cartão bancário</option>
+                  <option>Outro</option>
+                </select>
+              </label>
+
+              <label>
+                Nome ou iniciais do proprietário
+                <input type="text" name="ownerName" placeholder="Ex.: A. Nhamposse" required />
+              </label>
+
+              <label>
+                Zona onde foi perdido
+                <input type="text" name="lossZone" placeholder="Ex.: Baixa, Maputo" required />
+              </label>
+
+              <label>
+                Data aproximada da perda
+                <input type="date" name="lossDate" required />
+              </label>
+            </div>
+
+            <label>
+              Descrição adicional
+              <textarea
+                name="description"
+                rows="4"
+                placeholder="Descreve o contexto sem partilhar dados sensíveis."
+              ></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Guardar pedido de procura</button>
+              <span class="privacy-note">Sem publicar dados sensíveis nem números completos.</span>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="forms-section alt" id="encontrei">
+        <div class="container section-heading">
+          <p class="eyebrow">2. Encontrei um documento</p>
+          <h2>Regista o documento encontrado</h2>
+        </div>
+
+        <div class="container form-shell">
+          <form class="report-form found-form" id="foundForm">
+            <div class="field-grid">
+              <label>
+                Tipo de documento encontrado
+                <select name="foundDocumentType" required>
+                  <option value="">Seleciona</option>
+                  <option>BI</option>
+                  <option>Passaporte</option>
+                  <option>Carta de condução</option>
+                  <option>Cartão bancário</option>
+                  <option>Outro</option>
+                </select>
+              </label>
+
+              <label>
+                Zona onde foi encontrado
+                <input type="text" name="foundZone" placeholder="Ex.: Matola, Mercado" required />
+              </label>
+
+              <label>
+                Data em que foi encontrado
+                <input type="date" name="foundDate" required />
+              </label>
+            </div>
+
+            <label>
+              Descrição limitada
+              <textarea
+                name="foundDescription"
+                rows="4"
+                placeholder="Descreve cor, material, local e outras pistas úteis, sem expor dados pessoais."
+              ></textarea>
+            </label>
+
+            <label class="file-upload">
+              Anexar fotografia privada
+              <input type="file" name="photo" accept="image/*" />
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Guardar documento encontrado</button>
+              <span class="privacy-note">A fotografia fica protegida e não é pública.</span>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="matching-section" aria-labelledby="matching-title">
+        <div class="container section-heading">
+          <p class="eyebrow">Correspondências e notificações</p>
+          <h2 id="matching-title">Possíveis correspondências</h2>
+        </div>
+
+        <div class="container matches-grid">
+          <article class="match-card highlight">
+            <span class="pill">Sistema interno</span>
+            <h3>Deteção de similaridade</h3>
+            <p>
+              Quando o tipo de documento, a zona e a data são semelhantes, o sistema sinaliza
+              uma possível correspondência em ambiente interno.
+            </p>
+          </article>
+
+          <article class="match-card">
+            <span class="pill">Notificações</span>
+            <h3>Alertas protegidos</h3>
+            <p>
+              Enviamos avisos internos às pessoas envolvidas, sem revelar dados privados sem
+              autorização clara.
+            </p>
+          </article>
+
+          <article class="match-card">
+            <span class="pill">Confirmação</span>
+            <h3>Verificação segura</h3>
+            <p>
+              A plataforma não confirma automaticamente quem é o proprietário. Recomenda-se
+              confirmação por entidade competente.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="security-section" id="seguranca">
+        <div class="container section-heading">
+          <p class="eyebrow">Segurança e privacidade</p>
+          <h2>Proteção de dados e prevenção de fraudes</h2>
+        </div>
+
+        <div class="container feature-grid">
+          <div class="feature-card">
+            <h3>Dados sensíveis</h3>
+            <p>Não publicamos números completos de documentos nem fotografias de BI ou passaporte.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Comunicação interna</h3>
+            <p>As mensagens entre as partes passam por canais internos e protegidos.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Moderação e denúncias</h3>
+            <p>Ativamos processos de revisão, denúncia e bloqueio de conteúdo fraudulento.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Sem pressão financeira</h3>
+            <p>Qualquer taxa de serviço futura precisa de confirmação explícita e recibo válido.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="payment-section">
+        <div class="container payment-box">
+          <div>
+            <p class="eyebrow">Pagamentos futuros</p>
+            <h2>Possível taxa de serviço de 40 MT</h2>
+          </div>
+
+          <div class="payment-copy">
+            <p>
+              A plataforma pode preparar um serviço de pagamento através de M-Pesa ou e-Mola,
+              mas nunca como garantia de recuperação do documento.
+            </p>
+            <ul>
+              <li>Pagamento apenas após confirmação clara.</li>
+              <li>Regras de cobrança visíveis e transparentes.</li>
+              <li>Recibo e confirmação do pagamento no processo.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-section" id="admin">
+        <div class="container section-heading">
+          <p class="eyebrow">Área de administração</p>
+          <h2>Gestão de registos, denúncias e correspondências</h2>
+        </div>
+
+        <div class="container admin-panel" aria-label="Painel administrativo de demonstração">
+          <div class="admin-card">
+            <span class="metric">12</span>
+            <p>Registos activos</p>
+          </div>
+          <div class="admin-card">
+            <span class="metric">3</span>
+            <p>Denúncias em revisão</p>
+          </div>
+          <div class="admin-card">
+            <span class="metric">5</span>
+            <p>Correspondências sinalizadas</p>
+          </div>
+          <div class="admin-card">
+            <span class="metric">1</span>
+            <p>Notificação interna</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>RecuperaDoc AMZ — Desenvolvido por Feliciano Sarmento — Maputo, Moçambique — © 2026</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
